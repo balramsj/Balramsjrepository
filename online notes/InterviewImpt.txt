@@ -1,0 +1,60 @@
+1)questions to be asked after the end of interview:-
+=>on wat project you are working
+or
+=>sir if i join your organisation what will be my roles and responsibilties.
+
+2)what are yor strength and weakness?
+strength:-
+i am confident individual.
+i am good team contributor and can handle the team.
+i am a self motivated.
+i am a self learner.
+
+3) tell about a defect which is most affective defect?
+while creating any type of event if we didnot provide linked event concept while creating then event application provides fatal error
+that is relationship is missing.i logged it as defect is optional value as per the business.
+
+
+4)how many requirements do you get in on sprint?
+
+5) When do you start automation?
+
+6)how to interact with your client?
+
+7)what are challenges u faced in your current project?
+
+8) in your previous organisation did you get opportunity to see the design documents?
+
+9)how many modules did you work in your previous project?
+
+10)how many test scripts are available?
+2000
+
+11)how frequently u r running automation suite?
+weekly 2 times.
+baased on adhoc request by my onsite team we do further.
+
+12)do you have sanity scripts?
+Yes we have a sanity test suite and it contains around 20 test scripts.
+
+13)reason for sanity?instead of going for automation?
+when a developer creates a new build,
+based on the result of sanity we will take the decision to make sure 
+if sanity is failed then we will log the defects.
+
+14) are u automating negative scenario?
+YEs
+in terms of end to end level.
+
+15)based on which paramter you r reviewing the test script?
+1)coding standards that include try catch and name convention or varibles,methods and object etc.
+2)every method should contain method header.
+3)every line should contain comments that describes wat line can do.
+4)wheather the existing resuable methods has utilized properly or not.instead of creating new codes for them.
+
+16)what is traiging?
+flaky
+invalid locators
+
+
+17)

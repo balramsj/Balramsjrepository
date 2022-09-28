@@ -1,0 +1,78 @@
+Case 1: Apply CSS Concepts on style attribute level:
+
+<html>
+<head><title>Sample Web Page</title></head>
+<body style="background-color:lightgray;">
+<h1 style="color:blue;text-align:center;">Sample Web Page</h1>
+<p style="font-family:calibri;font-size:40px;color:red;">Java is a programming language...</p>
+<p style="font-family:verdana;font-size:30px;color:green;">Java is used to develop Applications ...</p>
+
+</body>
+</html>
++++++++++++++++++++++++++++++++++++++++++++++++++
+Case 2: Apply CSS Concepts on Style Tag in <head> section
+<html>
+<head><title>Sample Web Page</title>
+  <style>
+     body {background-color:lightgray;}
+     h1 {color:green;text-align:center;}
+     p  {font-family:calibri;font-size:40px;color:red;}
+  </style>
+</head>
+<body>
+<h1>Sample Web Page</h1>
+<p>Java is a programming language...</p>
+<p>Java is used to develop Applications ...</p>
+
+</body>
+</html>
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Case 3: Apply CSS Concepts on Style Tag in <head> section with id and class attributes
+
+<html>
+<head><title>Sample Web Page</title>
+  <style>
+     body {background-color:lightgray;}
+     h1 {color:green;text-align:center;}
+     p#para1  {font-family:calibri;font-size:40px;color:red;}
+     p.para2  {font-family:calibri;font-size:40px;color:blue;}
+  </style>
+</head>
+<body>
+<h1>Sample Web Page</h1>
+<p class="para2">Java is a programming language...</p>
+<p id="para1">Java is used to develop Applications ...</p>
+
+</body>
+</html>
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Case 4: Apply CSS Concepts using external .css File
+
+<html>
+<head><title>Sample Web Page</title>
+ <link rel="stylesheet" type="text/css" href="Test.css"></link>
+</head>
+<body>
+<h1>Sample Web Page</h1>
+<p class="para2">Java is a programming language...</p>
+<p id="para1">Java is used to develop Applications ...</p>
+
+</body>
+</html>
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+External Test.css File
+
+body 
+{background-color:lightgray;}
+     
+h1 
+{color:green;text-align:center;}
+     
+p#para1  
+{font-family:calibri;font-size:40px;color:yellow;}
+     
+p.para2  
+{font-family:calibri;font-size:40px;color:blue;}
+

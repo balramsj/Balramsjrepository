@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Testcases">
+	<test name="Users and Products">
+		<classes>
+			<class name="com.sgtesting.users.Users">
+				<methods>
+					<method>
+						<include name="createUser"></include>
+					</method>
+				</methods>
+			</class>
+			<class name="com.sgtesting.products.Products">
+				<methods>
+					<method>
+						<include name="createProduct"></include>
+					</method>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,48 @@
+git config --global user.name "balramsj"
+
+git config --global user.email "balramsj96@gmail.com"
+
+git init
+ 
+git add *
+
+git commit -m "Intial Draft"
+git remote add origin
+http://github.com/balramsj/Abstractclass.git
+
+git push origin master
+
+
+git clone https://github.com/balramsj/ExampleMay9th2022repository.git
+
+
+cd Examplemay9th2022Repository/
+
+epository(master)
+git branch
+*master
+
+
+git branch qabranch
+
+
+epository
+git branch
+*master
+qabranch
+
+epository(master)
+git checkout qabranch
+switched to branch 'qabranch'
+
+
+
+
+
+git checkout
+
+
+
+
+
+https://github.com/pgudi/ExampleMay9th2022Repository.git

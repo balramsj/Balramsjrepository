@@ -1,0 +1,194 @@
+https://enigmatic-meadow-39517.herokuapp.com/students
+
+UserName: 
+Password: 
+
+-------------------------------
+sign in Scenario:
+Method: POST
+EndPoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/students/sign_in
+email: 
+password: 
+
+After execute of this Scenario pls capture "auth_token" for Authorization purpose
+--------------------------------
+Signout Scenario:
+Method: GET
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/students/sign_out
+
+Request Header: 
+	Authorization: <Your Token>
+--------------------------------
+Create User Scenario:
+Method: POST
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/users
+
+Request Header: 
+	Authorization: <Your Token>
+
+Request Body: (any number of keys you can pass with values)
+
+	email
+	first_name
+	last_name
+	phone_number
+	address
+	state
+	zipcode
+------------------------------------
+Edit User Scenario:
+Method: PUT
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/users/:id
+
+Request Header: 
+	Authorization: <Your Token>
+
+    email
+    first_name
+    last_name
+    phone_number
+    address
+    state
+    zipcode
+-------------------------------------
+Get one Particular User Scenario:
+Method: GET
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/users/:id
+
+Request Header: 
+	Authorization: <Your Token>
+-------------------------------------
+Get All Available Users who are created by the Specific Student Scenario:
+Method: GET
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/users
+
+Request Header: 
+	Authorization: <Your Token>
+
+------------------------------------
+Delete User Scenario:
+Method: PUT
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/users/:id
+
+Request Header: 
+	Authorization: <Your Token>
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Create Company Scenario:
+Method: POST
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/companies
+
+Request Header: 
+	Authorization: <Your Token>
+
+Request Body: (any number of keys you can pass with values)
+
+	name
+	email
+	address
+	phone_number
+
+------------------------------------
+Edit/Modify Company Scenario:
+Method: PUT
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/companies/:id
+
+Request Header: 
+	Authorization: <Your Token>
+
+Request Body: (any number of keys you can pass with values)
+
+	name
+	email
+	address
+	phone_number
+------------------------------------
+Get one Particular Company Scenario:
+Method: GET
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/companies/:id
+
+Request Header: 
+	Authorization: <Your Token>
+-------------------------------------
+Get All Available companies who are created by the Specific Student Scenario:
+Method: GET
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/companies
+
+Request Header: 
+	Authorization: <Your Token>
+------------------------------------
+
+Delete Company Scenario:
+Method: DELETE
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/companies/:id
+
+Request Header: 
+	Authorization: <Your Token>
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Create Project Scenario:
+Method: POST
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/projects
+
+Request Header: 
+	Authorization: <Your Token>
+
+Request Body: (any number of keys you can pass with values)
+
+	name
+	team_size
+	start_date
+	end_date
+	description
+	company_id
+
+------------------------------------
+Edit/Modify Project Scenario:
+Method: PUT
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/projects/:id
+
+Request Header: 
+	Authorization: <Your Token>
+
+Request Body: (any number of keys you can pass with values)
+
+	name
+	team_size
+	start_date
+	end_date
+	description
+	company_id
+
+------------------------------------
+Get one Particular Project Scenario:
+Method: GET
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/projects/:id
+
+Request Header: 
+	Authorization: <Your Token>
+-------------------------------------
+Get All Available Projects who are created by the Specific Student Scenario:
+Method: GET
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/projects
+
+Request Header: 
+	Authorization: <Your Token>
+
+------------------------------------
+Delete Project Scenario:
+Method: DELETE
+Endpoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/projects/:id
+
+Request Header: 
+	Authorization: <Your Token>
+
+++++++++++++++++++++++++++++++++++++++++++
+Import Users Scenario using .csv File Import:
+Method: POST
+EndPoint: https://enigmatic-meadow-39517.herokuapp.com/api/v1/users/import
+
+Body --> form-data --> File as Key and Browse the .csv File
+Request Header: 
+	Authorization: <Your Token>
+
+
+

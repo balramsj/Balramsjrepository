@@ -1,0 +1,24 @@
+1)difference between post and put
+2)difference between put and patch
+3)difference between get and head
+4)how to validate json payload or json response or payload
+5)what are different snipets in postman
+6)what is json schema and how how do you validate using response json schema
+7)what are the succssfull status codes are availabe describe each one 
+8)while executing any json request if we can get a server error what 
+can be your steps.
+ans-ill send a mail to my team to make sure that everytone is exper same issue 
+ill investage--->dev--->log the defects
+9) what is collections what is purpose of using collections
+ans-collection is used to store multiple request, the main purpose of using
+collections to seggregate the reuest based on the request based on the module wise.
+
+10)describe the below status codes?
+400-bad request
+401-unauthorized
+402-payment required
+403-forbidden
+404-page not found
+408-request time out
+413-request entity to large
+415-unsupported media type

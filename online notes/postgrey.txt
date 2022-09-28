@@ -1,0 +1,25 @@
+https://www.postgresql.org/download/
+server[localhost]:
+Database[postgres]:
+port[5432]:
+Username[postgres]:
+Password for user postgres: password
+
+\l ----> list of database available 
+\dt----->list of tables available in database
+
+*)How to see the structure of the table
+\d tablename
+
+*)how to see the records within the table
+select * from tablename
+
+
+1)create table query
+create table Employee1(eid int,ename varchar(10),job varchar(10),sal int); 
+CREATE TABLE
+
+2)insert records into the table
+insert into Employee1 (eid,ename,job,sal) values(11,'santosh','Manager',8500);
+INSERT 0 1
+ 

@@ -1,0 +1,643 @@
+Interview Questions in C#:-
+
+GoTo statement is available in c# and does not supported by java
+The C# goto statement is also known jump statement. It is used to transfer control to the other part of the program. 
+It unconditionally jumps to the specified label.
+note-mark and sweep
+_______________________________________________________________________________________________________________
+Jagged Arrays- contains each rows different size of columns or each record contain different size fo column,
+it can be declined or read the elements as follows:
+
+static void Main(string[] args)
+{
+	int[][]=new int[][];
+	a[0]=new int[]{10,20,30};
+	a[1]=new int[]{40,50,60,70,80,90};
+	for(int i=o;i<a.length;i++)
+	{
+		for(int j=0;j<a[i].length;j++)
+		{
+			console.write(a[i][j]+" ");
+		}
+		console.writeline();
+	}
+	console.read();
+}
+_________________________________________________________________________________________________________________
+destructor in c#:-
+
+in c# desctructor(finalizer) is used to destroy objects of class when the scope of an objects ends.It has the same name as 
+the class and starts with a tilde ~   ,it wont display the result from destuctor
+
+class Sample
+{
+	public Sample()
+	{
+		console.writeLine("it is constructor example");
+	}
+	~Sample()
+	{
+		console.writeLine("it is destructor example");
+		console.readline();
+	}
+}
+
+__________________________________________________________________________________________________________________
+static constructor:-static constructor name should be same as class name and it never accepts parameters.
+it executes in following two approach:-
+1) the execetion of any static variables or static methods before executing themselves first 
+they will execute static construtor
+2)if we create object for the respective class first it executes the static constructor
+______________________________________________________________________________________________________________________
+Structs in c#:-
+in c# classes and structs are blueprints that are used to create instance of class.
+the main purpose of structs is to define a data that is not intended to modify after creation of it.
+in class we can initialize the value for varibale but we cant do it in structs
+in structs we can define constructors and methods also.
+ex:-seasons of year,weekdays,monthname are like structs which do not change in any situation
+
+
+public struct Sample
+{
+	public Sample(string name)
+	{
+		console.writeline("testing the constructor");	
+	}
+	public void show()
+	{
+		console.writeline("it is show method body");		
+	}
+}
+class Program
+{
+	static void Main(String[] args)
+	{
+		Sample obj1=new Sample();
+		obj1.show();
+	}
+}
+
+public struct Sample
+{
+	public string season1;
+	public string season2;
+	public string season3;
+	public string season4;
+}
+
+class Program
+{
+	static void Main(String[] args)
+	{
+		Sample obj1=new Sample();
+		obj1.season1="rainy season";
+		obj1.season2="winter season";
+		obj1.season3="spring season";
+		obj1.season4="summer season";
+		console.writeline(obj1.season1+"  "+obj1.season2);
+		console.writeline(obj1.season3+"  "+obj1.season4);
+	}
+}
+____________________________________________________________________________________________________________
+structure in c#?
+In c#,structure is defined using sturct keyword.
+using struct keyword one can define the structure.
+a structure can also contain constructors,methods,properties etc.
+public struct Sample
+{
+	public Sample(string name)
+	{
+		console.writeline("testing the constructor");	
+	}
+	public void show()
+	{
+		console.writeline("it is show method body");		
+	}
+}
+class Program
+{
+	static void Main(String[] args)
+	{
+		Sample obj1=new Sample();
+		obj1.show();
+	}
+}
+_____________________________________________________________________________________________________________
+pointer in c#:-
+in c# pointer is nothing but a variable that holds the memory address of another type.
+
+
+how to make unsafe code;-
+right click on project--->properties--->select build--->select checkbox of 'allow unsafe code'
+class pointerdemo
+{
+	public unsafe void show()
+	{
+		int x=125;
+		int*y=&x;
+		console.writeLine("memory address:"+(int)y);
+		console.writeLine("value of x:"x);	
+	}
+
+}
+class program
+{
+	static void Main(string[] args)
+	{
+		pointerdemo obj=new pointerdemo();
+		obj.show();	
+	}
+}
+in c# statements can be executed either as in a safe or in an unsafe conetext. The statements marked as
+unsafe by using the keyword unsafe runs outside the constrol of garbage collector.
+Remember that in c# any code involving pointers requires an unsafe context.
+_______________________________________________________________________________________________________________
+basically there is no difference between String and string in c#."string" is just an alias of system.String
+and both are compiled in the same manner.String stands for system.String and it is a .NET Framework type.
+"string" is an alias in the c# lanaguage for system.String.
+
+________________________________________________________________________________________________________________
+how to explain specflow framework:-
+1)the execution of specflow frame work starts with nunit,the nunit in turn executes driver script the driver script 
+contains @cucumberoptions, it contains information in the form of key and value pair.key includes features,glue,pluggins
+tags. 
+
+SCENARIO OUTLINE AND EXAMPLES KEYWORDS:-
+scenario outline and examples keyword is mainly used for execution of scenario with multiple set of test data.
+based on the number of rows of test data provided in the examples keyword those many iterations the whole scenario
+will be executed.
+
+Feature: Login and Logout funcationality with parameters
+description: this feature validates login and logout funcationalities.
+
+Sceanrio Outline: Login with valid credentials
+Given  I launch the chrome browser
+And I navigate the applicatiob URL
+When I Enter the <username> in username text field as input
+And I enter the <password>in password text field as input
+And I click on login button
+Then I find the home page.
+And I click on minimize flyout window
+Given I find the home page
+When I click on Logout link
+Then I find the login page
+Then I close application
+
+Examples:
+|username|password|
+|admin|manager|
+|udername1|welcome1|
+
+[When(@"I enter the (.*) in username text field as input")]
+public void When IEntertheusernameinusernametextfieldasinput(String username)
+{
+ obrowser.FIndElement(By.ID("username")).sendkeys(username);
+}
+[When(@"I enter the (.*) in username text field as input")]
+public void When Ienterthepasswordinpasswordtextfieldasinput(String password)
+{
+ 	obrowser.FIndElement(By.name("pwd")).sendkeys(password);
+}
+____________________________________________________________________________________________________________________
+Specflow table paramterization:-
+By using  Specflow table paramterization a particular step in a scenario we can run mutliple iterations.
+table parameterization works on dictionary
+
+Feature: Login and Logout funcationality with parameters
+description: this feature validates login and logout funcationalities.
+
+Sceanrio: Login with valid credentials
+Given  I launch the chrome browser
+And I navigate the applicatiob URL
+when I enter credentials
+|username|password|
+|admin|manager|
+And I click on login button
+Then I find the home page.
+And I click on minimize flyout window
+Given I find the home page
+When I click on Logout link
+Then I find the login page
+Then I close application
+class Credentials													class Credentials
+{													{
+	public string?Username{get;set;}								private string username;
+	public string?password{get;set;}								private string username;
+}														public void setusername(string username)
+														{
+															this.username=username;	
+														}
+														public string getusernamename()
+														{
+															return username;
+														}
+													}
+
+[When(@"I enter credentials)]
+public void Ientercredentials(Table table)
+{
+	var.credentials=table.CreateInstance<Credentials>();
+	obrowser.findelement(BY.ID("username")).sendkeys(credentials.username);
+	obrowser.findelement(BY.name("pwd")).sendkeys(credentials.password);
+}
+
+
+_______________________________________________________________________________________________________________________________
+
+Page Object Model:- IN C# selenium the pagefactory.initElement method has been depricated and @FindBy Annotation cannot 
+be used.
+It hass been updated based on the lambda(=>) expression we can create private WebElements.
+The POM model works on the principle of encapsulation. Based on the lambda expression we can create private webelements, 
+the private webelements can be accessed based on the getter method.
+step 1: We have to create the page class, for the page class we have to specify the parameterized constructor which accepts driver object as parameter.
+step 2:Based on the lambda expression we can create private webelement.
+step 3: the private webelement can be accessible based on the getter method.
+
+class ActiTimePage
+{
+	public IWebDriver obrowser=null;
+	public ActiTimePage(IWebDriver obrowser)
+	{
+		this.browser=browser;
+	}
+	
+	private IWebElement oUser=>obrowser.FindElement(By.Id("username"));
+	private IWebElement opassword=>obrowser.FindElement(By.name("pwd"));
+	private IWebElement oLogin=>obrowser.FindElement(By.Id("loginButton"));
+	private IWebElement ominimizeflyoutwindow=>obrowser.FindElement(By.Id("gettingStartedShortcutsPanelId"));
+	private IWebElement oLogout=>obrowser.FindElement(By.Linktext("Logout"));
+	
+
+	public IWebElement GetUsername()	
+	{
+		return oUSer;
+	}	
+	public IWebElement Getpassword()	
+	{
+		return opassword;
+	}	
+	public IWebElement GetLogin()	
+	{
+		return oLogin;
+	}
+	public IWebElement Getflyoutwindow()	
+	{
+		return ominimizeflyoutwindow;
+	}
+	public IWebElement GetLogout()	
+	{
+		return oLogout;
+	}
+
+}
+class LoginLogout
+{
+	public static IWebDriver obrowser=null;
+	public static ActiTimePage opage=null;
+	
+	public static void LaunchBrowser()
+	{
+		obrowser.naviagte().GoUrl("https://localhost/login.do");
+		Thread.sleep(1000);	
+	}	
+	public static void login()
+	{
+		opage.getLogin().sendkeys("admin");
+		opage.Getpassword().sendkeys("manager");
+		opage.GetLogin().click();
+	}
+	public static minimizeflyutwindow()
+	{
+		opage.Getflyoutwindow().click();
+	}
+	public static void logout() 
+	{
+		opage.GetLogout.click();	
+	}
+	public static void closebrowser()
+	{
+		obrowser.quit();
+	}	
+}
+
+___________________________________________________________________________________________________________
+How to validate the test:-
+
+methods for validations are:-
+Assert.areEqual(String expected,string actual);
+Assert.assertNotareEqual(String expected,string actual);
+Assert.isFalse(object obj);
+Assert.isTrue(Object obj);
+Assert.AreSame(string expected,string acutal);
+Assert.AreNotSame(string expected,string actual);
+
+difference between AreEquals And AreSame
+
+AreEqual verifies the content
+AreSAme verifies the reference
+
+
+Case1:- By using assert method areequal();
+
+public static void naviagate()
+{
+	String excepted,actual;
+	expected="actiTime - Login";
+	obrowser.navigate("https://localhost/login.do");
+	actual=obrowser.title();
+	Assert.AreEqual(expected,actual); 
+	Thread.sleep(1000);
+}
+case2:- by using assert method istrue();
+
+public static void login()
+{
+	
+		opage.getLogin().sendkeys("admin");
+		opage.Getpassword().sendkeys("manager");
+		opage.GetLogin().click();
+		Thread.sleep(1000);
+		IWebElement oele=obrowser.FindElement(By.xpath("//td[text()='Enter Time-Track']"));
+		Assert.IsTrue(oele.isdisplayed);
+}
+
+case 3:- by using assert method isfalse();
+
+public static void Logout()
+{
+	opage.GetLogout().click();
+	Thread.sleep(1000);
+	IWebElement oele=obrowser.FindElement(By.LinkText("Logout");
+	Assert.isfalse(eole.Displayed);
+}
+______________________________________________________________________________________________________________
+FRAMES:-
+frames can be handled in c# selenium based on the index of the frame,name of the frame
+and WebElement of frame.
+There are two types of frames available in 
+1)Sub frames
+2)Nested frames
+
+SubFrames:-
+1)in order to handle the sub frame we have to switch to a specific frame
+based on the index,name or webelement of the frame.
+2)if we want to switch to other frame then 
+we have switch back to default page or main page
+3)from there we can switch we can switch we can to other frame .
+
+Nested frame:-
+1)once after identifying the parent frame by using index of the frame or name of the frame
+or webelement of frame.
+2)we can directly switch to child frame based on the specific index or name or webelement of the child frame.
+____________________________________________________________________________________________________________________
+HOW HANDLE POPBROWSER:-
+currentwindowhandle-prvides the window handles of the parent browser by default.
+windowhandles-provides window handlers(window id) of both parent and child browser.
+
+number of popup browser
+public static void popbrowsers()
+{
+	try
+	{
+
+	}
+	catch(Exception e)
+	{
+		console.writeline(e);
+	}
+}
+public static int numberofpopupbrowser()
+{
+	obrowser.windowhandle.count;
+
+}
+public static void numberofpopupbrowser()
+{
+	try
+	{
+		string parentwindow=obrowser.Currentwindowhandle;
+		console.writeline("the parent window id"+parentwindow);
+	
+		Readonlycollection<string>childwindow=obowser.windowhandles();
+		foreach(string childwindows in childwindow)
+		{
+			if(1childwindows.equals(parentwindow))
+			{
+				obrowser.switchto().windows(childwindows);
+			}
+			
+		}
+	}
+	catch(Exception e)
+	{
+		console.writeline(e);
+	}
+
+}
+
+how to handle the child browser:-
+in order to handle the child browser we have 
+to get get the window handler(window id) of parent and child browser by using
+the windowhandles() method. based on the switchto.window() method we can switch to
+specific child browsers by providin based on its respective window handlers.
+---------------------------------------------------------------------------------------------------------
+Action class- By using Actions class object we can perform we can keyboard and mouse action.
+By using action class we can access following methods 
+1)click();
+2)DoubleClick();
+3)contectClick();
+4)DragAndDrop();
+5)keyUp();
+6)KeyDown();
+7)MovetoElement();
+8)SendKeys();
+9)clickAndHold();
+
+public static void MouseActions()
+{
+	try
+	{
+		obrowser.FindElement(By.xpath(""//button[text()='x'])).click();
+		Thread.Sleep(1000);
+		IWebElement oEle=obrowser.findElement(By.xpath("//div[text]()='Electronics'));
+		Action oMouse=new Actions(obrowser);
+		oMouse.MoveToElement(oEle).Build().Perform();
+		Thread.Sleep(1000);
+		obrowser.FindElement(By.LInkText("Wired HeadPhones")).click();
+		ThreadSleep(1000);
+	}
+	catch(Exception e)
+	{
+		console.writeline(e);
+	}
+}
+-----------------------------------------------------------------------------------------------------------
+WebDriver Wait:-
+The WebDriver Wait is represented as explicit wait.
+it wait for the element upto a specified amount of time,if the elements ouccurs
+within the specified amount of time then it continues with execution of next line.
+if the element hasnt occur upto a specified amount of time then it will throw time out execption.
+
+public static void naviagate()
+{
+	try
+	{
+		obrowser.navigate().GoUrl("http://local/Login.do");
+		WebDriverWait wait=new WebDriverWait(obrowser,TimeSpan.FromSeconds(30));
+		IWebElement oUser=wait.Until<IWebElement>(d=>d.findElement(By.Id("Username")));
+		oUSer.SendKeys("admin")
+	}
+	catch(Exception e)
+	{
+		console.writeline(e);
+	}
+}
+note:-until () method;
+the until method is used to wait till the expected elements occurs
+in another approach we can return the Webelement of expected element
+and we can do some action.
+---------------------------------------------------------------
+defaultWait(fluent wait):-
+in c# selenium the default works as similar to fluent wait,
+for the object fo deafult wait we will provide timemout and pollinginterval as milliseconds
+and ignoring the exception types  as no suchelement exception by using IgnoreExceptionTypes.
+The WebDriver Wait works as follows:-
+it waits for the expected elements till the specified amount of time, if the element occurs within
+the specified amount of time it will continue with execution of upcoming line of code
+if the expected element has didi not occur upto a specified amount of time and throws time out
+Exception.
+in between every one second it verifies the availability of the element  by using pollinginterval if any exception 
+has arised during polling interval it has to be ignored by using ingnoreexceptiontypes.
+public static void navigate()
+{ 
+	try
+	{
+		obrowser.navigate().gotoUrl("http://localhost/login.do");
+		DefaultWait<IWebdriver> fluentWait=new Default<IWebDriver>(obrowser);
+		fluentWait.Timeout=TimeSpan.FromSeconds(30);
+		fluentWait.pollingInterval=Timespan.FromMilliseconds(1000);
+		fluentWait.IgnoredExceptionTypes(typesof(NoSuchElementsException));
+		fluentWait.Until(d=>d.Findelement(By.Id("username")));
+	}
+	catch(Exception e)
+	{
+		console.writeline(e);	
+	}
+}
+-----------------------------------------------------------------------------------------------------------
+Specflow framework:-
+
+
+HOW TO CREATE BATCH FILE:
+the batch file contains the sequence of DOS commands to achieve a specific action.
+
+cd\
+H:
+cd H:\CSharpWS\LambdaSpecflowSelenium\LambdaSpecflowSelenium
+dotnet test --filter TestCategory=Regression
+pause "Press Any Key to Exit"
+
+
+
+to execute a specific tag:-
+Case 1:-in order to execute a specific tag in command line we have to navigate to the project folder
+and execute the below command.
+
+dotnet test --filter TestCategory=Smoke
+
+by using this approach we can run either sanity or regression test scripts
+
+
+case 2:- how to execute multiple tags it means if i would like to execute sanity and regression test script together.
+
+Multiple Tags Execution
+dotnet test --filter "TestCategory=Sanity|TestCategory=Regression"
+
+case 3:- some of the feature or scenarios act as sanity as well as Regression test case in order to include those feature
+files or scenarios for execution we have to include & operator in test category.
+
+dotnet test --filter 
+"TestCategory=Sanity&TestCategory=Regression"
+------------------------------------------------------------
+FRAME WORK EXECUTION DESCRPTION:-
+the execution of my spec flow automation framework starts with batch file in order to execute sanity test script seperatly
+and regression test script seperately i have created to seperate batch files, a sanity batch file is responsible for execution
+of sanity test scripts  i have around 20 scenarios for sanity test script execution the execution of sanity batch file takes 
+around 20-25 mins.
+i have another batch file to execute regression test script and more then 100 test scripts and more the 200 feature files
+the execution of this batch file take around 7-8 hours.
+depending on the selection of the batch file the execution of my specflow framework starts.
+the entry point for execution of my specflow framework is .featurefile
+in my framework there is drivers folder, in driver folder i have written selenium driver.cs file, the seleniumdriver.cs file
+is responsible for returning the webdriver object by using ScenarioContext.
+the ScenarioContext works based on the context injection.
+in my selenium class which i have written in a drivers folder there i have created a filed _scenarioncontext as follows
+based on the parameterized constructor we are injecting scenario context.
+
+private readonly ScenarioContext _scenarioContext;
+	public seleniumDriver(ScenarioContext scenariocontext)
+	{
+		_scenarioContext=scenariocontext;
+	}
+
+the same scenariocontext can be used in the step defination files as well hooks.
+the responsibilty of selenium driver class by using SetUp method it returns driver object.
+In my current automation framework i am returning chromeDriver object.
+since the entry point for my frame work is featurefiles by default the available featurefiles executes unspecified order,
+in order to execute the available featurefiles in a specific order we have to use hook attribute here the lowest order value
+executes first and highest order value executes last. A feature file has written by using jherkin keyword.the keywords includes
+scenario-it indicates a particular test case. a single feature file can have n number of scenarios.the available scenarios in the
+feature files executes based on the sequentail order.
+scenario outline-it is mainly used for execution of scenario with multiple set of test data, here the based number of
+rows test data we have provided those many times the scenario outline will be executed.
+Background -if all the scenarios in the given feature files are having same preconditions the we have to use
+background keyword.
+Given - Given keyword is used for defining the preconditions for scenario
+When - When keyword is used performing a particular or a specfic action action which need to performed.
+Then -Then keyword indicates validation of test step or post conditions that includes the validation of the scenario.
+And  -And keyword provides additional steps for given,when,then. 
+But -But Keyword indicates inverse operations or negative operation.
+
+the available feature files contains one or more scenario, each scenario in turn these gkerkin keyowrds.
+
+StepDefinations:- Each steps available in the featurefiles the corresponding method must be available in the step defination
+file. that method has been desgined based on the C# Selenium TestScripts. 
+In step defination we are utilizing the setup method from the selenium driver class  based on the scenariocontext field,
+by using this approach we can launch a specfic browser.
+we can maintain multiple step defination files in the same folder but we available step defination files must not contain
+the duplicate steps, if duplicate steps are available it provides duplicate step defination exception.
+in step defination file i have written test script based on the page object model. in each scenario the test data 
+can be handled using specflow table concepts. by using this approach a individual step can be run in multiple iteration.
+the specflow table works on encapsultion concept that is setter and getter approach with respect to each test data level
+we have to create a corresponding class in utils folder.that class works on based on the encapsulation concept.  
+the utils contains n number of project specific resuble method that includes isalerpresent,ispopupbrowserpresent,isframepresent
+issepeciciUIelementpresent etc reusable methods.
+
+HOOkS:- in my C# spec flow frame work hooks play a vital role it contians, the folowing hook that includes
+[BeforeTestRun] 
+[AfterTestRun]
+[Beforefeature]
+[Afterfeature]
+[BeforeScenario]
+[AfterScenario]
+[BeforeStep]
+[AfterStep]
+
+By using these available hooks it creates extent reports wrt each available feature files and each available sceanrio wise.
+By using the above hooks we can perform some action,before or afte each feature file wise, before or after each scenario wise,
+before or after each step wise.
+The final outcome of my specflow framework is extent reports                                 
+
+
+1)Explain briefly about your frame work layout:-
+the speclflow frame work contains the following folders
+1)drivers
+2)features
+3)Hooks
+4)Reports
+5)Steps
+6)utils
+
+
+
+

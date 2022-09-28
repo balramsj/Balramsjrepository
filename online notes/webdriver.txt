@@ -1,0 +1,21 @@
+interface Webdriver
+{
+	void findElement(By by);
+	void findElement(By by);
+	close();
+	get(String url);
+	quit();
+}
+
+
+class ChromeDriver implements WebDriver
+{
+	WebDriver obj=new ChromeDriver();
+	ChromeDriver obj=new ChromeDriver();
+}
+class FirefoxDriver implements WebDriver
+{
+	WebDriver obj=new WebDriver();
+	FirefoxDriver obj=new FirefoxDriver();
+}
+

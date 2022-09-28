@@ -1,0 +1,30 @@
+no such element exception:-The exception occurs when WebDriver is unable to find and locate elements.
+
+timeout exception:-command takes longer than the wait time to avoid the ElementNotVisible Exception.
+
+no such window exception:-when the driver in the Selenium Program code 
+is unable to find the pop-up window on the web page to switch
+
+no alert present exception:-if there is no alert box present at the time of switching, 
+then Selenium raises NoAlertPresentException instead
+
+ no such frame exception:-when the driver in the Selenium Program code is unable to find the frame on the web page to switch.
+
+null pointer exception:-thrown when the application try to use an object reference which has a null value
+
+stale element reference exception:-Assume there is an element that is found on a web page referenced as a WebElement in WebDriver. If the DOM changes then the WebElement goes stale.
+ If we try to interact with an element which is staled then the StaleElementReferenceException is thrown.
+
+
+session not created exeception:-You might be using the lower version of the chrome driver.
+
+element not selectable exception
+element not iteractable exception
+element not visible exception
+
+element click intercepted exception:-ElementClickInterceptedException Indicates that a click could not be properly executed because 
+the target element was obscured in some way.
+
+
+
+

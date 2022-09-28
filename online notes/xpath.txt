@@ -1,0 +1,36 @@
+//<tagname>
+
+//<tagname>[index]
+
+//<tagname>[@attributename]
+
+//<tagname>[@attributename='attributevalue']
+
+//*[@attributename='attributename']
+
+//*[@*='attributevalue']
+
+//<tagname>[@attributename='attributevalue'][@attributename='attributevalue']
+
+//<tagname>[@attributename='attributevalue' and @attributename='attributevalue']
+
+//<tagname>[@attributename='attributevalue' or @attributename='attributevalue']
+
+//<tagname>[contains(@attributname,'attributevalue')]
+
+//<tagname>[starts-with(@attributename,'attributevalue')]
+
+
+//<tagname>[text()='textcontent']
+
+//<tagname>[contains(text(),'textcontent')]
+//<tagname>[starts-with(text(),'textcontent')]
+
+//<tagname>[@attributename]/following-sibling::td[]/input
+
+//<tagname>[@attributename]/following::tr[]/td[]/input
+
+//<tagname>[@]
+
+
+

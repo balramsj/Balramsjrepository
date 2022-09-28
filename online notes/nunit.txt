@@ -1,0 +1,35 @@
+visual studio selenium webdriver configuration
+tools--->newjetmanager package-->manage newjet packages for solutions
+
+
+
+waterfall
+spiral
+prototype
+v-v
+hybrid
+agile
+functional
+integration
+system
+smoke
+adhoc
+exploratory
+compatibilty
+sanity
+UAT
+peroformance
+globalization
+usability
+accessbility
+reliability
+recovery
+penetration
+security
+failover
+
+unit test executes based on the aplhbetical order
+in order to run in sequential order
+along with test annotation we have provide the order number
+the text fixture annotation we have provide at class level that indicates
+the specific class contains unit test cases

@@ -1,0 +1,13 @@
+1)https://www.selenium.dev/     ---->click on Stable:-Java for(Selenium Jar Files)
+	||
+2)https://www.selenium.dev/downloads/
+	||
+3)https://chromedriver.chromium.org/
+	||
+4)https://chromedriver.storage.googleapis.com/index.html?path=105.0.5195.52/   -------> (click on the chromedriver_32.exe file)
+	||
+5)create a folder named library in that folder create two sub folders a)Drivers b)Selenium
+	||
+6)in driver folder add chromediver.exe file and in  selenium folder add selenium jar files which are 80.
+
+

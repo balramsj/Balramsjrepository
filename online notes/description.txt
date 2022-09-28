@@ -1,0 +1,7 @@
+CAM
+--------------------------------
+Advent Corporate Actions allows you to easily integrate timely and accurate corporate actions data to reduce your portfolio management risks. 
+Advent Corporate Actions increases the accuracy of your analysis and valuations, giving you an automated standard for handling corporate actions such as mergers and acquisitions, splits, and dividends, among other actions.
+Advent Corporate Actions give you the flexibility to integrate corporate actions data into different applications to meet the specific needs of your business and industry. The applications illustrate the wide range of business processes that the web service supports.
+Advent Corporate Actions delivers data on demand on key corporate actions such as mergers, acquisitions, delisted, change of name, suspended, etc. 
+The new service enables companies to integrate these critical events into their systems and models to better manage risk and make faster, more informed asset management decisions.

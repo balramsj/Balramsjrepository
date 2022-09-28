@@ -1,0 +1,79 @@
+testscenario-high level document of test case.
+
+role and responsibilty-
+Roles and Responsibilities:
+
+·       Involved in Manual, Automation Testing
+
+·       Understanding the Customer Requirement Specification and Software Requirement Specification document.
+
+·       Active Involvement in Agile Process.
+
+.       Involved in converting test cases into test scripts and maintaining that test scripts.
+
+.       Executing the test scripts for each and every regression 
+Involved in writing Functional Testing, Integration Testing and System Testing Test Cases.
+
+·       Involved in Writing, Reviewing and Executing Test Cases.
+
+·       Involved in Preparing Traceability Matrix.
+	
+
+·       Modifying the test cases when change in the requirements.
+
+·       Responsible for managing bug status.
+
+
+Defects = 6 months =30
+defect=1 year=60
+
+P1=5 ,P2=10, P3=10, P4=5
+
+test cases-1year
+6 months-manual-100
+6 months-automation-50
+
+severity & priorty-
+severity-it is parameter to denote the impact of the particular defect on the software
+priorty- it is the parameter to decide the order in which the defect should be fixed.
+
+high priorty and high severity issues in this project-
+login funcationality
+course creation
+assignment creation
+
+high priorty and low severity issues in this project-
+login funcationality is working fine but password mask functionality is not working fine.
+user id not visible.
+
+low priorty and high severity issues in this project-
+slight alignment mismatch in the pages.
+course title is not visible in the instructor dashboard
+
+low priorty and low severity issues in this project-
+student name are not sorted in the alphabetical order.
+assignment is created but success msg not appeared as an alert.
+
+how to priortize the test cases in this project-
+based on the functionality of the application
+
+how to priortize the bug in this project-
+based on the functionality of the application
+
+
+when do you perform regression testing-
+after completion of formal testing.
+
+the purpose of automation-
+save the cost,time,resource.
+
+wen we come with issue we log the defect
+
+wen we find the bug in production 
+
+if we find bug in pre production then we have to find priority and severity of the bug,
+
+
+
+1)how frequently u get build?
+everyday we get builds nearly 3,4,5 every day.

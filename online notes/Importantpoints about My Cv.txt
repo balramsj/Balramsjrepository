@@ -1,0 +1,4 @@
+speckflow framework:-
+visual studio 2017 or above
+specflow extension installed
+selenium refrence
